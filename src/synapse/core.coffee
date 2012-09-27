@@ -17,7 +17,12 @@
         toString: Object.prototype.toString
 
         getType: (object) ->
-            @toString.call(object).match(/^\[object\s(.*)\]$/)[1]
+            if object == null
+                "null"
+            else if typeof object == "undefined"
+                "undefined"
+            else
+                @toString.call(object).match(/^\[object\s(.*)\]$/)[1]
 
         isObject: (object) ->
             @getType(object) is 'Object'

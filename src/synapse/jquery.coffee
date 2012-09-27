@@ -211,7 +211,7 @@
     # encountered.
     domEvents = [
         ['a,button,[type=button],[type=reset]', 'click']
-        ['select,[type=checkbox],[type=radio],textarea', 'change']
+        ['select,[type=checkbox],[type=radio],[type=text],[type="email"],[type="number"],[type="url"],textarea', 'change']
         ['[type=submit]', 'submit']
         ['input', 'keyup']
     ]

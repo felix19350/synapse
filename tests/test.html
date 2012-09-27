@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Test suite for simple synapse interfaces</title>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/qunit/qunit-1.10.0.css"/>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
+<script type="text/javascript" src="../dist/dev/synapse.js"></script>
+<script type="text/javascript" src="../dist/dev/synapse/core.js"></script>
+<script type="text/javascript" src="../dist/dev/synapse/jquery.js"></script>
+<script type="text/javascript" src="../dist/dev/synapse/object.js"></script>
+<script type="text/javascript" src="test-suite.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	setupTest();
+	testBasicBinding("basicBindingTest", "Test value");
+	testVisibleInterface("visibleInterfaceTest", true);
+	testVisibleInterface("visibleInterfaceTest", false);	
+});
+
+</script>
+
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture">
+	<div id="basicBindingTest"></div>
+	<div id="visibleInterfaceTest">Content for the div</div>
+</div>
+</body>
+</html>
